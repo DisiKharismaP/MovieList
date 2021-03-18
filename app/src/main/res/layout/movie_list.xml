@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_10">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_card_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_poster_list"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_280"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:contentDescription="@string/image_view"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/poster_movie" />
+
+            <TextView
+                android:id="@+id/tv_movie_title_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_poster_list"
+                android:fontFamily="@font/poppins_bold"
+                android:maxLines="4"
+                android:text="@string/flora_ulysses"
+                android:textColor="@color/color_orange"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/tv_release_date_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_movie_title_list"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_poster_list"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/release_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_movie_genre_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_release_date_list"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_poster_list"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLines="2"
+                android:text="@string/movie_genre"
+                android:textColor="@color/color_main_gray"
+                android:textSize="@dimen/sp_9" />
+
+            <TextView
+                android:id="@+id/tv_view_count_list"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_movie_genre_list"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_poster_list"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/user_score"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/iv_view_count_list"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_below="@id/tv_movie_genre_list"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_toEndOf="@id/tv_view_count_list"
+                android:contentDescription="@string/image_view"
+                android:src="@drawable/view_count" />
+
+            <TextView
+                android:id="@+id/tv_vc_percent_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_movie_genre_list"
+                android:layout_marginStart="@dimen/dp_35"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_toEndOf="@id/tv_view_count_list"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/score_percent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_synopsis_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_view_count_list"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_poster_list"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/synopsis"
+                android:textColor="@color/color_orange"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_synopsis_desc_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_synopsis_list"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_poster_list"
+                android:fontFamily="@font/poppins_light"
+                android:maxLines="6"
+                android:text="@string/txt_synopsis"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_9" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
